@@ -3,32 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <title>Document</title>
 </head>
-<header>
-    <nav>
-        <a href="index.html">Home Page</a>
+
+<main>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img id="runewell" src="images/runewell.png" alt="runewell">
+            </a>
+            <a href="aboutus.html">About Us</a>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="contactus.html">Contact Us</a>
+            <a href="characterhub.html">Character Hub</a>
+            <a href="storyteller.html">Storyteller's Workshop</a>
+            <a href="lorearchive.html">Lore Archive</a>
+        </nav>
+    </header>
+    <body>
+        <main>
+            <section class="marketplace-grid">
+                <div class="marketplace-item">
+                    <img src="images/marketcategory1.png" alt="Dice Set">
+                    <h2>Dice</h2>
+                    <p>Roll with Style! Unique and enchanted dice sets</p>
+                </div>
+                <div class="marketplace-item">
+                    <img src="images/marketcategory2.png" alt="Miniature Figures">
+                    <h2>Miniatures</h2>
+                    <p>Bring your characters to life with detailed minis</p>
+                </div>
+                <div class="marketplace-item">
+                    <img src="images/marketcategory3.png" alt="Maps">
+                    <h2>Maps</h2>
+                    <p>Explore vast realms with beautifully illustrated maps</p>
+                </div>
+                <div class="marketplace-item">
+                    <img src="images/marketcategory4.png" alt="D&D Adventures">
+                    <h2>D&D Adventures</h2>
+                    <p>Pre-written adventures to spark epic campaigns</p>
+                </div>
+            </section>
+        </main>
+        <div class="view-cart-bar" id="viewCartBar">
+            <span id="cartText">View Cart</span>
+        </div>
+
+        <script>
+            const cartBar = document.getElementById("viewCartBar");
+            const cartText = document.getElementById("cartText");
+
+            cartBar.addEventListener("mouseenter", () => {
+                cartText.textContent = "Vide currum";
+            });
+
+            cartBar.addEventListener("mouseleave", () => {
+                cartText.textContent = "View Cart";
+             });
+        </script>
+    </body>
+    <footer>
+        <a href="index.html">
+            <img id="runewell" src="images/runewell.png" alt="runewell">
+        </a>
         <a href="aboutus.html">About Us</a>
         <a href="marketplace.html">Marketplace</a>
         <a href="contactus.html">Contact Us</a>
         <a href="characterhub.html">Character Hub</a>
         <a href="storyteller.html">Storyteller's Workshop</a>
         <a href="lorearchive.html">Lore Archive</a>
-    </nav>
-</header>
-<body>
-   
-    
-</body>
-<footer>
-    <a href="index.html">Home Page</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="marketplace.html">Marketplace</a>
-    <a href="contactus.html">Contact Us</a>
-    <a href="characterhub.html">Character Hub</a>
-    <a href="storyteller.html">Storyteller's Workshop</a>
-    <a href="lorearchive.html">Lore Archive</a>
-    <p>&copyDragovich</p>
-</footer>
+        <p>&copy Dragovich</p>
+    </footer>
+</main>
 </html>
